@@ -8,26 +8,85 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="header">
-        <div class="container">
-            <nav>
-                <img src="images/logo.png" class="logo" alt="logo img">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="header-text">
-                <p>Python Django Developer</p>
-                <h1>Hi I'm <span>Rinshad</span></h1>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo" alt="logo img">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Python Django Developer</p>
+            <h1>Hi I'm <span>Rinshad</span></h1>
+        </div>
+    </div>
+</div>
+<!-- --------------------about------------------ -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Aspiring full stack developer with a solid foundation in front-end and back-end development technologies. Recently graduated with a degree in Computer Science, eager to apply theoretical knowledge in a practical setting. Proficient in HTML, CSS, JavaScript, PYTHON, Django, BOOTSTRAP and SQL Strong problem-solving skills, a quick leamer, and a collaborative team player. Passionate about developing innovative solutions and dedicated to continuously enhancing skills in tull stack development</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                    <p class="tab-links" onclick="opentab('training')">Training</p>
+                </div>
+                <!-- Skills -->
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Programming</span><br>Python, HTML, CSS, JAVASCRIPT</li>
+                        <li><span>Database</span><br>MySql</li>
+                        <li><span>Libraries</span><br>Bootstrap, React</li>
+                        <li><span>Framework</span><br>Django</li>
+                        <li><span>Tool</span><br>Git</li>
+                    </ul>
+                </div>
+                <!-- Education -->
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2020-2023 (UG)</span><br>Studied Bachelor of science @University of calicut</li>
+                        <li><span>2018-2020 (Higher Secondary)</span><br>Studied Computer Science @ H. S. S Koduvayur </li>
+                        <li><span>2018 (Matriculation)</span><br>@G. H. S. S Koduvayur .</li>
+                    </ul>
+                </div>
+                <!-- Training -->
+                <div class="tab-contents" id="training">
+                    <ul>
+                        <li><span>Python Django</span><br>Training on PYTHON DJANGO (Python, Html, Css, JavaScript, Bootstrap, Sql and Django) at QJ spiders in Kochi .</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
+</div>
 
 
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for (tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+    }
+
+</script>
 
 </body>
 </html>
